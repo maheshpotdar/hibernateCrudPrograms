@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate_autoddl_operations</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password"></property>
+		<property name="connection.pool_size">10</property>
+		<property name="show_sql">true</property>
+		<property name="current_session_context_class">thread</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hbm2ddl.auto">create</property>
+		<!-- 1. hbm2ddl.auto create manaje magacha table purn drop kar ani navin 
+			table tayar kar ani atache object tyamadhe insert kar. -->
+
+		<!--2. hbm2ddl.auto update manaje tya table madhe 500 record ahet tar 501 
+			number navin object add kar. -->
+
+		<!--3. hbm2ddl.auto create-drop same like create. -->
+
+		<!--4. hbm2ddl.auto validate same like update. -->
+
+
+	</session-factory>
+</hibernate-configuration>
